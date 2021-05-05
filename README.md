@@ -1,24 +1,28 @@
-# README
+E-commerce store 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
 
-* Ruby version
+User (user posts products and makes purchases)
+    First_name 
+    Last_name 
+    email
+    password 
+    product_id
 
-* System dependencies
+Products (are owned by user that posted and can be purchased from another user)
+    Title 
+    Description
+    Price 
+    Inventory 
+    User_id 
 
-* Configuration
+Shopping Cart
+    Products
+    Quantity
+    Total Price 
 
-* Database creation
+user auth
+search bar
+hot items
+deals
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
