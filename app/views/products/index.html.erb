@@ -1,22 +1,37 @@
+<style>
+  .col-card {
+    padding-bottom: 25px;
+  }
+</style>
+
+
 <p id="notice"><%= notice %></p>
 
 <h1>Products</h1>
 
-<% @products.each do |product| %>
-  <div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title"><%= product.title %></h5>
-      <p class="card-text"><%= product.description %></p>
-      <p class="card-text"><%= product.price %></p>
-      <p class="card-text"><%= product.inventory %></p>
+<div class="container">
+  <div class="row">
+    <% @products.each do |product| %>
+      <div class="col col-card">
+        <div class="card" style="width: 18rem;">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><%= product.title %></h5>
+            <p class="card-text"><%= product.description %></p>
+            <p class="card-text">Price: $<%= product.price %></p>
+            <p class="card-text"><%= product.inventory %> Remaining</p>
 
-      <%= link_to 'Show', product, class:"btn btn-primary" %>
-      <%= link_to 'Edit', edit_product_path(product) %>
-      <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
-    </div>
+            <%= link_to 'Show', product, class:"btn btn-primary" %>
+            <%= link_to 'Edit', edit_product_path(product) %>
+            <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </div>
+        </div>
+      </div>
+    <% end %>
   </div>
-<% end %>
+</div>
+ 
+
 
 <br>
 
