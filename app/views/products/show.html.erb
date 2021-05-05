@@ -1,5 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+<% if @product.product_picture.attached? %>
+  <img src="<%=(url_for(@product.product_picture))%>" class="card-img-top" alt="...">
+<% end %>
+
 <p>
   <strong>Title:</strong>
   <%= @product.title %>
