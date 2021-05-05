@@ -11,32 +11,29 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+  <div class="field form-group">
+    <%= form.text_field :title, class:"form-control", placeholder:"Title" %><br>
   </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_field :description %>
+  <div class="field form-group">
+    <%= form.text_field :description, class:"form-control", placeholder:"Description" %><br>
   </div>
 
-  <div class="field">
-    <%= form.label :price %>
-    <%= form.number_field :price %>
+  <div class="field form-group">
+    <%= form.number_field :price, class:"form-control", placeholder:"Price" %><br>
   </div>
 
-  <div class="field">
-    <%= form.label :inventory %>
-    <%= form.number_field :inventory %>
+ <div class="field form-group">    
+    <%= form.number_field :inventory, class:"form-control", placeholder:"Inventory" %><br>
   </div>
 
-  <div class="field">
-    <%= form.label "Product Picture" %>
-    <%= form.file_field :product_picture %>
+ <div class="field form-group">
+    <%= form.label "Product Picture" %><br>
+    <%= form.file_field :product_picture %><br>
   </div>
 
   <div class="actions">
+  <br>
     <%= form.submit %>
   </div>
 <% end %>
